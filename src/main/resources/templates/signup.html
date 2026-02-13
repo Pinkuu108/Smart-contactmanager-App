@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>This IS Home Page</title>
+</head>
+<body>
+
+<section class="register-page-bg">
+    <div class="register-page-overlay">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 offset-md-3">
+                    <div class="my-card mt-4">
+
+                        <div class="container text-center">
+
+                            <!-- MESSAGE ALERT -->
+                            <div th:if="${message}" th:classappend="${message.type}"
+                                 class="alert" role="alert">
+                                <p th:text="${message.content}"></p>
+                            </div>
+
+                            <!-- Registration image -->
+                            <img style="width: 90px" alt="Register"
+                                 th:src="@{/img/register.png}" src="">
+                        </div>
+
+                        <h1 class="text-center mb-3">Register Here</h1>
+
+                        <form th:action="@{/do_register}" method="post"
+                              th:object="${user}" id="signupForm" novalidate>
+
+                            <!-- Name Field -->
+                            <div class="form-group mb-3">
+                                <label for="name_field">Your Name</label>
+                                <input th:field="*{name}" id="name_field" type="text"
+                                       class="form-control" placeholder="Enter here"
+                                       th:classappend="${#fields.hasErrors('name')} ? ' is-invalid' : ''"/>
+                                <div class="invalid-feedback"
+                                     th:if="${#fields.hasErrors('name')}"
+                                     th:errors="*{name}"></div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group mb-3">
+                                <label for="email_field">Your Email</label>
+                                <input type="email" th:field="*{email}" id="email_field"
+                                       class="form-control" placeholder="Enter here"
+                                       th:classappend="${#fields.hasErrors('email')} ? ' is-invalid' : ''"/>
+                                <div class="invalid-feedback"
+                                     th:if="${#fields.hasErrors('email')}"
+                                     th:errors="*{email}"></div>
+                            </div>
+
+                            <!-- Password Field -->
+                            <div class="form-group mb-3">
+                                <label for="password_field">Your Password</label>
+                                <input type="password" th:field="*{password}" id="password_field"
+                                       class="form-control" placeholder="Enter here"
+                                       th:classappend="${#fields.hasErrors('password')} ? ' is-invalid' : ''"/>
+                                <div class="invalid-feedback"
+                                     th:if="${#fields.hasErrors('password')}"
+                                     th:errors="*{password}"></div>
+                            </div>
+
+                            <!-- User About Field -->
+                            <div class="form-group mb-3">
+                                <textarea name="about" class="form-control"
+                                          placeholder="Enter something here"
+                                          rows="4" th:field="*{about}"></textarea>
+                            </div>
+
+                            <!-- Terms and Condition Agreement -->
+                            <div class="form-group form-check mb-3">
+                                <input type="checkbox" name="agreement"
+                                       class="form-check-input" id="agreement">
+                                <label for="agreement" class="form-check-label">
+                                    Accept terms and Conditions
+                                </label>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="container text-center">
+                                <input type="hidden" name="enabled" value="true">
+
+                                <button type="submit" class="btn bg-primary text-white">
+                                    Submit
+                                </button>
+
+                                <button type="button" class="btn bg-danger text-white"
+                                        id="btnReset">
+                                    Reset
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('btnReset').addEventListener('click', function () {
+        const form = document.getElementById('signupForm');
+        form.reset();
+        Array.from(form.elements).forEach(function (el) {
+            if (!el.name) return;
+            const t = el.type;
+            if (t === 'hidden') return;
+            if (t === 'checkbox' || t === 'radio') el.checked = false;
+            else el.value = '';
+        });
+    });
+</script>
+
+</body>
+</html>

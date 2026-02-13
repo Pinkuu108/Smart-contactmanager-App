@@ -1,0 +1,503 @@
+/* /* ---------- Global ----------
+body {
+	background: #ffffff;
+	font-family: 'Poppins', sans-serif;
+}
+
+---------- Primary Theme ----------
+.bg-primary {
+	background: #009688 !important;
+}
+
+---------- Banner ----------
+.banner {
+	width: 100%;
+	height: 93vh;
+	background: url("/img/banner.jpg") no-repeat center center;
+	background-size: cover;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+---------- Card ----------
+.my-card {
+	padding: 30px;
+	background: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+---------- Headings ----------
+.my-card h1 {
+	font-weight: 600;
+	color: #2c3e50;
+	margin-bottom: 20px;
+}
+
+---------- Labels ----------
+.form-group label {
+	font-weight: 500;
+	color: #374151;
+}
+
+---------- Inputs ----------
+.form-control {
+	border-radius: 8px;
+	padding: 10px 12px;
+	border: 1px solid #ccc;
+}
+
+.form-control:focus {
+	border-color: #009688;
+	box-shadow: 0 0 0 0.15rem rgba(0, 150, 136, 0.25);
+}
+
+---------- Textarea ----------
+textarea.form-control {
+	resize: none;
+}
+
+---------- Buttons ----------
+.btn {
+	border-radius: 25px;
+	padding: 8px 25px;
+	font-weight: 500;
+}
+
+.btn.bg-primary {
+	background: linear-gradient(135deg, #009688, #00796b) !important;
+	border: none;
+}
+
+.btn.bg-danger {
+	background: linear-gradient(135deg, #ef4444, #dc2626);
+	border: none;
+}
+
+---------- Checkbox ----------
+.form-check-label {
+	color: #374151;
+}
+
+---------- Alerts ----------
+.alert {
+	border-radius: 8px;
+	font-size: 14px;
+}
+
+---------- Image ----------
+.my-card img {
+	margin-bottom: 15px;
+}
+
+---------- Mobile Responsive ----------
+@media ( max-width : 576px) {
+	.my-card {
+		padding: 20px;
+	}
+}
+
+---------- Side Bar Style ----------
+@media only screen and (max-width:600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		background: white;
+		height: 100vh;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.content {
+		margin-left: 0% !important;
+	}
+}
+
+.sidebar {
+	width: 18%;
+	background: #ffffff;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+}
+
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+
+.sidebar a:hover {
+	background: #e2e2e2;
+}
+
+.sidebar .divider {
+	height: 1px;
+	width: 100%;
+	background: #374151;
+	margin: 10px 0;
+}
+
+.content {
+	margin-left: 20%;
+	background: #f9fafb; very light grey
+	min-height: 100vh;
+	padding: 30px;
+}
+
+.sidebar .crossBtn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 32px;
+	cursor: pointer;
+	color: #000000;
+	font-weight: bold;
+} */ 
+
+/* ---------- Global ---------- */
+/* ---------- Global ---------- */
+body {
+	background: #ffffff;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------- Primary Theme ---------- */
+.bg-primary {
+	background: #009688 !important;
+}
+
+/* ---------- Banner ---------- */
+ .banner {
+	width: 100%;
+	height: 93vh;
+	background: url("/img/home1.jpg") no-repeat center center;
+	background-size: cover;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+} 
+/* .banner {
+    width: 100%;
+    height: calc(100vh - 70px);  full screen minus navbar height
+    background: url("/img/home1.jpg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+} */
+
+
+/* ---------- Card ---------- */
+.my-card {
+	padding: 30px;
+	background: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Headings ---------- */
+.my-card h1 {
+	font-weight: 600;
+	color: #2c3e50;
+	margin-bottom: 20px;
+}
+
+/* ---------- Labels ---------- */
+.form-group label {
+	font-weight: 500;
+	color: #374151;
+}
+
+/* ---------- Inputs ---------- */
+.form-control {
+	border-radius: 8px;
+	padding: 10px 12px;
+	border: 1px solid #ccc;
+}
+
+.form-control:focus {
+	border-color: #009688;
+	box-shadow: 0 0 0 0.15rem rgba(0, 150, 136, 0.25);
+}
+
+/* ---------- Textarea ---------- */
+textarea.form-control {
+	resize: none;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+	border-radius: 25px;
+	padding: 8px 25px;
+	font-weight: 500;
+}
+
+.btn.bg-primary {
+	background: linear-gradient(135deg, #009688, #00796b) !important;
+	border: none;
+	color: #ffffff;
+}
+
+.btn.bg-danger {
+	background: linear-gradient(135deg, #ef4444, #dc2626);
+	border: none;
+	color: #ffffff;
+}
+
+/* ---------- Checkbox ---------- */
+.form-check-label {
+	color: #374151;
+}
+
+/* ---------- Alerts ---------- */
+.alert {
+	border-radius: 8px;
+	font-size: 14px;
+}
+
+/* ---------- Image ---------- */
+.my-card img {
+	margin-bottom: 15px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+	width: 18%;
+	background: #1f2937;     /* dark professional */
+	height: 100vh;
+	position: fixed;
+	padding-top: 45px;
+	border-right: 1px solid #111827;
+	opacity: 1;
+}
+
+/* Sidebar links */
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: #ffffff;          /* ✅ WHITE TEXT */
+	font-weight: 500;
+}
+
+/* Sidebar icons */
+.sidebar a i {
+	color: #ffffff;          /* ✅ WHITE ICONS */
+}
+
+/* Hover */
+.sidebar a:hover {
+	background: #374151;
+	color: #ffffff;
+}
+
+.sidebar a:hover i {
+	color: #ffffff;
+}
+
+/* Divider */
+.sidebar .divider {
+	height: 1px;
+	width: 100%;
+	background: #374151;
+	margin: 10px 0;
+}
+
+/* Close button */
+.sidebar .crossBtn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 32px;
+	cursor: pointer;
+	color: #ffffff;          /* ✅ WHITE X */
+	font-weight: bold;
+}
+
+/* ---------- Content ---------- */
+.content {
+	margin-left: 20%;
+	background: #f9fafb;
+	min-height: 100vh;
+	padding: 30px;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 600px) {
+
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		padding-top: 20px;
+	}
+
+	.content {
+		margin-left: 0% !important;
+		padding: 20px;
+	}
+
+	.my-card {
+		padding: 20px;
+	}
+}
+/* ===================================================== */
+/*                      ABOUT PAGE                       */
+/* ===================================================== */
+
+/* About page full‑screen background image */
+.about-page-bg {
+    background: url("/img/about.jpg") no-repeat center center;
+    background-size: cover;          /* image covers section */
+}
+
+/* Dark/teal overlay on top of image */
+.about-page-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 150, 136, 0.45),
+        rgba(0, 0, 0, 0.55)
+    );
+}
+
+/* Hero title style on about page */
+.about-hero-title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Section headings inside about cards */
+.about-section-title {
+    letter-spacing: 0.5px;
+}
+
+/* Card style used only on about page */
+.about-card {
+    border-radius: 0.75rem;
+    background-color: #f0f9ff;   /* soft blue instead of pure white */
+}
+/* ---------- Registration Page Background ---------- */
+.register-page-bg {
+    background: url("/img/registation.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.register-page-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+/* ===================================================== */
+/*                      SIGNUP PAGE                      */
+/* ===================================================== */
+
+/* Whole page: light blue background and full height */
+.signup-page {
+    background-color: #e0f2ff;         /* light blue page background */
+    min-height: 100vh;
+}
+
+/* Two-column layout container (left + right) */
+.signup-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT empty blue area */
+.signup-left {
+    flex: 1;
+    background-color: #e0f2ff;         /* same light blue */
+}
+
+/* RIGHT area that holds the white card */
+.signup-right {
+    flex: 1;
+    display: flex;
+    align-items: center;               /* vertical center */
+    justify-content: center;           /* horizontal center */
+    padding: 40px 20px;
+}
+
+/* White card for the form */
+.signup-card {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.25);
+    padding: 32px 32px 36px;
+}
+
+/* Title style */
+.signup-title {
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Buttons modern look */
+.btn-signup-submit {
+    border-radius: 999px;
+    padding: 10px 28px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #009688, #00796b);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-signup-submit:hover {
+    background: linear-gradient(135deg, #00bfa5, #00897b);
+}
+
+.btn-signup-reset {
+    border-radius: 999px;
+    padding: 10px 28px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-signup-reset:hover {
+    background: linear-gradient(135deg, #f97373, #f04336);
+}
+
+/* Responsive: collapse to single column on small screens */
+@media (max-width: 768px) {
+    .signup-wrapper {
+        flex-direction: column;
+    }
+
+    .signup-left {
+        display: none;                 /* hide empty left side on mobile */
+    }
+
+    .signup-right {
+        padding: 24px 16px;
+    }
+
+    .signup-card {
+        max-width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+    }
+}
+.hero-title {
+    font-weight: 700;
+    background: linear-gradient(135deg, #fef9c3, #f97316, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* show gradient instead of solid color */
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.hero-subtitle {
+    color: #bfdbfe; /* light blue */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}

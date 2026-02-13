@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{normal/base :: layout(~{::section})}">
+
+<head>
+<meta charset="UTF-8">
+<title>Update Contact</title>
+</head>
+
+<body>
+<section>
+
+	<div class="container mt-4">
+		<h3 class="text-center mb-3">Update Contact</h3>
+
+		<form th:action="@{/user/update-contact}" method="post"
+			  th:object="${contact}" enctype="multipart/form-data">
+
+			<input type="hidden" th:field="*{cId}" />
+
+			<!-- ================= NAME ================= -->
+			<div class="form-group mt-2">
+				<label>Name</label>
+				<input type="text" class="form-control" th:field="*{name}">
+			</div>
+			<small class="text-danger"
+				   th:if="${#fields.hasErrors('name')}"
+				   th:errors="*{name}">
+			</small>
+
+			<!-- ================= EMAIL ================= -->
+			<div class="form-group mt-2">
+				<label>Email</label>
+				<input type="email" class="form-control" th:field="*{email}">
+			</div>
+			<small class="text-danger"
+				   th:if="${#fields.hasErrors('email')}"
+				   th:errors="*{email}">
+			</small>
+
+			<!-- ================= PHONE ================= -->
+			<div class="form-group mt-2">
+				<label>Phone</label>
+				<input type="text" class="form-control" th:field="*{phone}">
+			</div>
+			<small class="text-danger"
+				   th:if="${#fields.hasErrors('phone')}"
+				   th:errors="*{phone}">
+			</small>
+
+			<!-- ================= WORK ================= -->
+			<div class="form-group mt-2">
+				<label>Work</label>
+				<input type="text" class="form-control" th:field="*{work}">
+			</div>
+
+			<!-- ================= DESCRIPTION ================= -->
+			<div class="form-group mt-2">
+				<label>Description</label>
+				<textarea class="form-control" rows="3"
+						  th:field="*{description}"></textarea>
+			</div>
+			<small class="text-danger"
+				   th:if="${#fields.hasErrors('description')}"
+				   th:errors="*{description}">
+			</small>
+
+			<!-- ================= IMAGE ================= -->
+			<div class="form-group mt-2">
+				<label>Change Image</label>
+				<input type="file" class="form-control" name="profileImage">
+			</div>
+
+			<div class="container text-center mt-3">
+				<button class="btn btn-primary">Update Contact</button>
+			</div>
+
+		</form>
+	</div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Smart Contact Manager</title>
+
+    <style>
+        /* ---------- About Page Background ---------- */
+        .about-page-bg {
+            background: url("/img/about.jpg") no-repeat center center;
+            background-size: cover;                  /* section filled by image [web:76] */
+        }
+
+        /* Optional dark overlay to improve text readability */
+        .about-page-overlay {
+            background-color: rgba(0, 0, 0, 0.45);   /* semi‑transparent dark layer [web:71] */
+        }
+
+        .about-hero-title {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-section-title {
+            letter-spacing: 0.5px;
+        }
+
+        .about-card {
+            border-radius: 0.75rem;
+            background-color: #f0f9ff;              /* soft light color instead of pure white [web:96][web:100] */
+        }
+    </style>
+</head>
+<body>
+
+<section class="about-page-bg">
+    <div class="about-page-overlay">
+        <div class="container py-5">
+
+            <!-- HERO HEADER -->
+            <div class="text-center mb-5 text-white">
+                <h1 class="fw-bold about-hero-title mb-3">
+                    Smart Contact Manager
+                </h1>
+                <p class="fs-5 fst-italic mb-0">
+                    A secure, scalable and modern Spring Boot web application for managing contacts efficiently.
+                </p>
+            </div>
+
+            <!-- GRID LAYOUT FOR CARDS -->
+            <div class="row g-4">
+
+                <!-- PROJECT OVERVIEW -->
+                <div class="col-12">
+                    <div class="card shadow-sm border-0 about-card">
+                        <div class="card-body">
+                            <h4 class="fw-semibold text-primary about-section-title mb-3">
+                                <i class="fas fa-layer-group me-2 text-primary"></i>
+                                Project Overview
+                            </h4>
+                            <p class="text-muted mb-0">
+                                Smart Contact Manager is a full-stack web application built with Java and Spring Boot to
+                                securely store, manage and organize personal contacts with authentication and role-based access control.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PURPOSE -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0 about-card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-semibold text-success about-section-title mb-3">
+                                <i class="fas fa-bullseye me-2 text-success"></i>
+                                Purpose of the Project
+                            </h5>
+                            <p class="text-muted mb-0">
+                                The project builds real-world experience in Java full-stack development by implementing
+                                authentication, database relationships, file uploads and responsive UI using industry-standard frameworks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNOLOGIES -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0 about-card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-semibold text-warning about-section-title mb-3">
+                                <i class="fas fa-tools me-2 text-warning"></i>
+                                Technologies &amp; Skills Used
+                            </h5>
+                            <ul class="text-muted mb-0">
+                                <li><span class="fw-semibold text-dark">Java:</span> Core Java, OOP concepts</li>
+                                <li><span class="fw-semibold text-dark">Spring Boot:</span> MVC architecture</li>
+                                <li><span class="fw-semibold text-dark">Spring Security:</span> authentication &amp; authorization</li>
+                                <li><span class="fw-semibold text-dark">Spring Data JPA &amp; Hibernate</span></li>
+                                <li><span class="fw-semibold text-dark">Thymeleaf</span> template engine</li>
+                                <li><span class="fw-semibold text-dark">MySQL</span> database</li>
+                                <li>HTML, CSS, Bootstrap, JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEY FEATURES -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0 about-card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-semibold text-danger about-section-title mb-3">
+                                <i class="fas fa-star me-2 text-danger"></i>
+                                Key Features
+                            </h5>
+                            <ul class="text-muted mb-0">
+                                <li>User registration and login</li>
+                                <li>Secure authentication using Spring Security</li>
+                                <li>Create, view, update and delete contacts</li>
+                                <li>Upload contact profile images</li>
+                                <li>Search contacts functionality</li>
+                                <li>Responsive dashboard UI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHY THIS PROJECT -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0 about-card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-semibold text-info about-section-title mb-3">
+                                <i class="fas fa-question-circle me-2 text-info"></i>
+                                Why Smart Contact Manager?
+                            </h5>
+                            <p class="text-muted mb-0">
+                                This project demonstrates the ability to design and develop a complete Java-based web application
+                                following MVC principles, security best practices and clean UI patterns similar to production systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FUTURE SCOPE -->
+                <div class="col-12">
+                    <div class="card shadow-sm border-0 about-card">
+                        <div class="card-body">
+                            <h5 class="fw-semibold text-secondary about-section-title mb-3">
+                                <i class="fas fa-road me-2 text-secondary"></i>
+                                Future Scope
+                            </h5>
+                            <ul class="text-muted mb-0">
+                                <li>Enhanced user profile management</li>
+                                <li>Advanced search with pagination</li>
+                                <li>REST API integration</li>
+                                <li>Email and phone validation</li>
+                                <li>Cloud deployment and monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
