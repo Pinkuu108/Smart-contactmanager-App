@@ -4,8 +4,9 @@ Smart Contact Manager is a secure web application built using Java, Spring Boot,
 The application provides role-based authentication, secure password handling with BCrypt encryption, and complete contact management features with a clean layered architecture.
 
 🔗 Repository URL  
+```
 https://github.com/Pinkuu108/Smart-contactmanager-App.git
-
+```
 ✨ Features
 
 ✔ User Registration & Login  
