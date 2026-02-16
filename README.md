@@ -1,6 +1,6 @@
 🚀 Smart Contact Manager – Spring Boot Web Application
 
-Smart Contact Manager is a secure web application built using Java, Spring Boot, Spring Security, Spring Data JPA, MySQL, and Thymeleaf.  
+Smart Contact Manager is a secure web application built using Java, Spring Boot, Spring Security, Spring Data JPA, MySQL, and Thymeleaf.
 The application provides role-based authentication, secure password handling with BCrypt encryption, and complete contact management features with a clean layered architecture.
 
 🔗 Repository URL  
@@ -51,17 +51,16 @@ Smart_Contact_Manager/
 1️⃣ Clone Repository  
 git clone https://github.com/Pinkuu108/Smart-contactmanager-App.git
 
-
 2️⃣ Open Project  
 Import into IntelliJ IDEA / Eclipse / Spring Tool Suite
 
 3️⃣ Configure Database (application.properties)
 
 Update only these values:
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database
-spring.datasource.username=your_username
-spring.datasource.password=your_password
 
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database  
+spring.datasource.username=your_username  
+spring.datasource.password=your_password  
 
 ✔ No other changes required
 
@@ -70,6 +69,19 @@ Run the Spring Boot main class
 
 5️⃣ Access Application  
 http://localhost:8080/
+
+🌐 Sample Endpoints (Illustrative)
+
+Authentication  
+POST /register        → Register new user  
+POST /login           → User login  
+
+Contacts  
+GET    /contacts      → Fetch all contacts  
+POST   /contacts      → Create new contact  
+GET    /contacts/{id} → Fetch contact by ID  
+PUT    /contacts/{id} → Update contact  
+DELETE /contacts/{id} → Delete contact  
 
 🎯 Project Objective
 
