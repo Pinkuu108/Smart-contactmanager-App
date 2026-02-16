@@ -36,7 +36,7 @@ View Layer
 - Bootstrap  
 
 📂 Project Structure
-
+```
 Smart_Contact_Manager/
 ├── controller/      → Request Handling Layer  
 ├── service/         → Business Logic  
@@ -45,12 +45,13 @@ Smart_Contact_Manager/
 ├── dto/             → Data Transfer Objects  
 ├── exception/       → Global Exception Handling  
 └── config/          → Security & App Configuration  
-
+```
 ⚙️ Setup Instructions
 
 1️⃣ Clone Repository  
+```
 git clone https://github.com/Pinkuu108/Smart-contactmanager-App.git
-
+```
 2️⃣ Open Project  
 Import into IntelliJ IDEA / Eclipse / Spring Tool Suite
 
@@ -58,18 +59,20 @@ Import into IntelliJ IDEA / Eclipse / Spring Tool Suite
 
 Update only these values:
 
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database  
 spring.datasource.username=your_username  
 spring.datasource.password=your_password  
-
+```
 ✔ No other changes required
 
 4️⃣ Run Application  
 Run the Spring Boot main class
 
 5️⃣ Access Application  
+```
 http://localhost:8080/
-
+```
 🌐 Sample Endpoints (Illustrative)
 
 Authentication  
